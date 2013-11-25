@@ -6,9 +6,11 @@ var moveAmp =1;
 function useItem(x, y, z, itemId, blockId, side)
 {
 //if you tapped using an iron, gold, or diamond sword
-  if(itemId == 276,283,267){
-  if(getPlayerZ()-z>=-1&&getPlayerZ()-z<=1&&getPlayerX()-x>=-1&&getPlayerX()-x<=1){
-  setVelY(getPlayerEnt(),0.8)}
+  if ((itemId == 276) || (itemId ==283) || (itemId ==267)){
+   if (getPlayerZ()-z >= -1 && getPlayerZ()-z <= 1 && getPlayerX()-x >= -1 && getPlayerX()-x <= 1)
+   {
+    setVelY(getPlayerEnt(),0.8)
+   }
   else
    {
    //correcting the yaw
