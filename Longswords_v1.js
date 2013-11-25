@@ -2,7 +2,7 @@
  function useItem(x, y, z, itemId, blockId, side)
  {
  //a diamond, gold, or iron sword
- if(itemId == 276,283,267)
+ if(itemId == 276 || itemId == 283 || itemId == 267)
  {
   var jumped = 0
  if(getPlayerZ()!=z&&getPlayerX!=x){
