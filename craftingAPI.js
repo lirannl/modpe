@@ -1,6 +1,7 @@
 var GUI;
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
 var CTID = 176
+var ironCost = 4
 function useItem(x,y,z,itemID,blockId,side)
  {
   if (blockId == 54 && side == 1)
