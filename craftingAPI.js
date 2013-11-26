@@ -2,7 +2,12 @@ var GUI;
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
 var CTID = 176
 var ironCost = 4
-function useItem(x,y,z,itemID,blockId,side)
+function craft(input, iAmount, output, oAmount)
+{
+ 
+ 
+} 
+function useItem(x,y,z,itemId,blockId,side)
  {
   if (blockId == 54 && side == 1)
    {
@@ -21,6 +26,8 @@ function useItem(x,y,z,itemID,blockId,side)
      }
     }
    }
+   if (blockId == CTID)
+   {
+    craft()
+   }
  }
- // if (blockId == CTID)
- //  {
