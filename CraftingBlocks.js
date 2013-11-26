@@ -6,6 +6,7 @@ function selectLevelHook() { //This is called before the first world is loaded
                 // in the order (bottom, top, south, north, west, east).
                 // in this case, the side textures are the same, and the top/bottom textures are different.
                 Block.defineBlock(176, "Crafting table", [[0, 6], [2, 11], [0, 4], [0, 4], [0, 4], [0, 4]], 5);
+                Block.setDestroyTime(176, 3000)
                 initialized = true;
         }
 }
