@@ -1,5 +1,5 @@
 var initialized = false;
-
+var blocksloaded = true;
 function selectLevelHook() { //This is called before the first world is loaded
         if (!initialized) { //if we have not set up our custom block
                 // define a block with ID 176, name "Crafting table", and the following textures
