@@ -1,5 +1,6 @@
 var GUI;
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
+var CTID = 176
 function useItem(x,y,z,itemID,blockId,side)
  {
   if (blockId == 54 && side == 1)
@@ -8,7 +9,7 @@ function useItem(x,y,z,itemID,blockId,side)
     {
      if((getCarriedItem(getPlayerEnt() == 265) && (Player.getCarriedItemCount() >= ironCost))
      {
-      previousCount = Player.getCarriedItemCount()
+     var previousCount = Player.getCarriedItemCount()
       Entity.setCarriedItem(getPlayerEnt(), 0)
       Player.addItemInventory(265, previousCount - ironCost)
       Level.SetTile(x, y, z, CTID)
