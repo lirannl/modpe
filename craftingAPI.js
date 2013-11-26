@@ -1,6 +1,6 @@
 var CTID = 176
 var ironCost = 4
-var CTableInv = new Array();
+var CTableInv = [[280,0,2],[265,0,1]];
 var CTableInvSlot = new Array();
 function addToCTable()
 {
@@ -9,7 +9,9 @@ function addToCTable()
  if (Player.getCarriedItem != 0)
  {
   CTableInput = [Player.getCarriedItem, Player.getCarriedItemData, Player.getCarriedItemCount]
-  if ([CTableInput[0], CTableInput[1]] = [(for (var i=0; i < CTableInv.length; i++) CTableInput[0]),(for (var i=0; i < CTableInv.length; i++) CTableInput[1])])
+  for (var i1=0; i1 < CTableInv.length; i1++) CTableInput[0]
+  for (var i2=0; i2 < CTableInv.length; i2++) CTableInput[1]
+  if (CTableInv[i1[0]] == CTableInput[0] && CTableInv[i2[1]] == CTableInput[1])
   {
   CTableInv[i[2]] = CTableInv[i[2]] + CTableInput[2]
   }
@@ -21,7 +23,11 @@ function addToCTable()
 }
 function craft()
  {
-  
+//add recipes here
+//example (iron sword)
+ ModPE.readData([useItem.x,useItem.y - 1,useItem.z])
+//Search for iron in block's inventory                                              search for sticks in block's inventory
+ if ((for (var i1=0; i1 < CTableInv.length; i1++) (CTableInv[[0]]) == 265) {success} && for (var i2=0; i2 < CTableInv.length; i2++) (CTableInv[[0]]) == 265) {success} && (CTableInv[i[2]] == 2))
  }
 function useItem(x,y,z,itemId,blockId,side)
  {
@@ -42,11 +48,11 @@ function useItem(x,y,z,itemId,blockId,side)
      }
     }
    }
-   if (blockId == CTID && ((Level.getTile(x + 1, y, z) == 58) || (Level.getTile(x - 1, y, z) == 58)|| (Level.getTile(x, y, z + 1) == 58)||(Level.getTile(x, y, z - 1) == 58)))
+   if (blockId == CTID && ((Level.getTile(x, y + 1, z) == 58))
    {
     addToCTable()
    }
-   if (blockId == 58 && ((Level.getTile(x + 1, y, z) == 58) || (Level.getTile(x - 1, y, z) == 58)|| (Level.getTile(x, y, z + 1) == 58)||(Level.getTile(x, y, z - 1) == 58)))
+   if (blockId == 58 && ((Level.getTile(x, y + 1, z) == 58)))
    {
     craft()
    }
