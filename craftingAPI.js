@@ -1,16 +1,5 @@
 var GUI;
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
-var initialized = false;
-var CTID = 187;
-var ironCost = 4;
-var previousCount;
-
-function selectLevelHook() 
- {
- if (initialized) return;
- Block.defineBlock(CTID, "Crafting table", [6, [2, 11], 4, 4, 4, 4], 4)
- Block.setDestroyTime(CTID, 3000)
- }
 function useItem(x,y,z,itemID,blockId,side)
  {
   if (blockId == 54 && side == 1)
