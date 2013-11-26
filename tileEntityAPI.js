@@ -6,15 +6,16 @@ var tileEntity = new Object();
 function useItem( x, y, z, itemId, blockId, side )
  { 
  //add more properties here if needed
- ModPE.readData( x , y, z, blockId )
+ tileEntity = ModPE.readData( [x , y, z, blockId] )
  tileEntity.location = [ x, y, z ]
  tileEntity.tile = [ blockId, dmgVal ]
  tileEntity.inv = new Array()
- ModPE.saveData( x, y, z, blockId )
+ ModPE.saveData( x, y, z, blockId, tileEntity )
  //Inventory management starts here
   if (enableInvMng == true)
   {
   input = [ Player.getCarriedItem(), Player.getCarriedItemData(), Player.getCarriedItemCount() ]
+  
   }
  }
  
