@@ -1,6 +1,6 @@
 //enable retreival and extraction features
 var enableInvMng = true
-//reading the damage value of a tile is not implemented yet
+//reading the damage value of a tile is not implemented yet, but I have this value as a dummy for now.
 var dmgVal;
 var tileEntity = new Object();
 function useItem( x, y, z, itemId, blockId, side )
@@ -14,7 +14,7 @@ function useItem( x, y, z, itemId, blockId, side )
  //Inventory management starts here
   if (enableInvMng == true)
   {
-  
+  input = [ Player.getCarriedItem(), Player.getCarriedItemData(), Player.getCarriedItemCount() ]
   }
  }
  
