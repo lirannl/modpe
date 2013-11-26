@@ -29,5 +29,5 @@ function useItem(x,y,z,itemID,blockId,side)
      }
     }
    }
-  if (blockId == CTID)
-   {
+ // if (blockId == CTID)
+ //  {
