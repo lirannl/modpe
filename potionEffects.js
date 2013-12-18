@@ -1,4 +1,4 @@
-var effect = new array()
+var effect = []
 var second = 0
 function modTick()
 {
