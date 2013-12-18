@@ -1,0 +1,1 @@
+var effect = new array
