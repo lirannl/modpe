@@ -13,7 +13,7 @@ function modTick()
     {
      Entity.setHealth( Entity.getHealth(getPlayerEnt()) - effectAmp)
     }
-    else
+    if (Entity.getHealth(getPlayerEnt()) < effectAmp)
     {
      Entity.setHealth(getPlayerEnt(), 1)
     }
