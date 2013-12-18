@@ -7,9 +7,9 @@ function modTick()
    if (effect[2] > 0 && effect[3] > 0)
    {
     if (Entity.getHealth(getPlayerEnt()) > effect[3])
-   {
-    Entity.setHealth( Entity.getHealth(getPlayerEnt()) - effect[3])
-   }
+    {
+     Entity.setHealth( Entity.getHealth(getPlayerEnt()) - effect[3])
+    }
     else
     {
      Entity.setHealth(getPlayerEnt(), 1)
