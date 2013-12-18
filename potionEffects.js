@@ -28,7 +28,7 @@ function modTick()
    second = 0
   }
 }
-function procCmd(cmd);
+function procCmd(cmd)
 {
   if (cmd.substring(0,6) == "/effect")
   {
