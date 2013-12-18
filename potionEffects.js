@@ -1,5 +1,5 @@
-var effect[]
-var second = 0
+var effect[] ;
+var second = 0 ;
 function modTick()
 {
   if (second == 1 && effect[1] == "poison")
