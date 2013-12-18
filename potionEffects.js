@@ -31,5 +31,6 @@ function procCmd(cmd)
   if (cmd.substring(0,6) == "/effect")
   {
    //extracting the parameters from the command
+   effect = cmd.split(" ")
   }
 }
