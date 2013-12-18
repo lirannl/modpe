@@ -1,14 +1,17 @@
-var effect = []
+var effectType
+var effectDuration
+var effectAmp
 var second = 0
 function modTick()
 {
   if (second == 1 && effect[1] == "poison")
   {
-   if (effect[2] > 0 && effect[3] > 0)
+   if (effectDuration > 0 && effectAmp > 0)
    {
-    if (Entity.getHealth(getPlayerEnt()) > effect[3])
+    effectDuration += -1
+    if (Entity.getHealth(getPlayerEnt()) > effectAmp)
     {
-     Entity.setHealth( Entity.getHealth(getPlayerEnt()) - effect[3])
+     Entity.setHealth( Entity.getHealth(getPlayerEnt()) - effectAmp)
     }
     else
     {
@@ -30,8 +33,8 @@ function procCmd(cmd);
   if (cmd.substring(0,6) == "/effect")
   {
    //setting effect[1] to the text between the space after /effect to the last letter before the next space
-   effect[1] = cmd.substring(8, cmd.substring(8,cmd.length).search(" ") -1))
-   effect[2] = Number(cmd.substring(9 + effect[1].length, 9 + cmd.substring(9 + effect[1].length, cmd.length).search(" ") - 1))
-   effect[3] = Number(cmd.substring(10 + effect[1].length + effect[2].length, cmd.substring(10 + effect[1].length + effect[2].length, cmd.length).search(" ") - 1))
+   effectType = cmd.substring(8, cmd.substring(8,cmd.length).search(" ") -1))
+   effectDuration = Number(cmd.substring(9 + effectType.length, 9 + cmd.substring(9 + effectType.length, cmd.length).search(" ") - 1))
+   effectAmp = Number(cmd.substring(10 + effectType.length + effectDuration.length, cmd.substring(10 + effectType.length + effectDuration.length, cmd.length).search(" ") - 1))
   }
 }
